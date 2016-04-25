@@ -1,0 +1,45 @@
+import java.util.Date;
+
+/**
+*	@author Jérome Morin, Thomas Schmieglitz, Peter Wachsmann
+*	@version 1.0, 25.04.2016
+*
+*	Klasse zur Initialisierung der Variablen für das Ticketsystem
+*
+*	Dies sind die ersten Codezeilen des Flashdesk-Teams!
+*	Let's rock it !!!
+**/
+
+	private String title;
+	private String description;
+	private int state;
+	private int urgency;
+	private String engineerFName;
+	private String engineerLName;
+
+/**
+* @param title
+*						Titel der Stoerungsmeldung
+* @param description
+*						Stoerungsmeldung
+* @param state
+*						Status des Tickets
+* @param urgency
+*						Dringlichkeitseinstufung
+* @param engineerFName
+*						Vorname des Ticket-Bearbeiters
+* @param engineerLName
+*						Nachname des Ticket-Bearbeiters
+**/			
+
+
+	public Ticket(String title, String description, int state, int urgency, String engineerFName, String engineerLName)
+	{
+		this.title = title;
+		this.description = description;
+		this.state = state;
+		this.urgency = urgency;
+		this.engineerFName = engineerFName;
+		this.engineerLName = engineerLName;
+	}
+	
