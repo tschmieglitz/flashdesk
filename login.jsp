@@ -8,17 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<TITLE>login flashdesk</TITLE>
-</HEAD>
-
-<BODY>
-<FORM action="" method="post">
-Benutzername: <INPUT type="text" name="title" size="35"><BR><BR>
-Password: <INPUT type="text" name="title" size="35"><BR>
-</SELECT>
-<BR>
-<BR>
-<INPUT type="submit" name="Submit" value="anmelden">
-</FORM>
+	<h1>Benutzeranmeldung</h1>
+	<form action="xxxx.jsp" method="post">
+		Benutzername <input type="text" name="name" />
+	<br></br>
+		Kennwort <input type="text" name="name" />
+		<br></br>
+		<input type="submit" name="submit" value="OK" /> 
+	</form>
 </body>
 </html>
