@@ -1,0 +1,24 @@
+﻿/****************
+*          LOGIN          *  
+*****************/
+
+#distance { 
+	width:1px;
+	height:50%;
+	margin-bottom: -9em;
+	/*background-color:#fc6;*/
+	float:left;
+}
+
+#login {
+	margin:0 auto;
+	position:relative; /* puts container in front of distance */
+	text-align:center;
+	color: white;
+	height:14em;
+	width:23em;
+	clear:left;
+	padding:0.5em;
+	background-color:#0000A0;
+	/*border:1px solid;*/
+}
