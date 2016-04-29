@@ -13,7 +13,7 @@
   <div id="login">
 
 	<h1 style="color: red; size:8">Benutzeranmeldung</h1>
-	<form action="xxxx.jsp" method="post">
+	<form action="flashdesk.jsp" method="post">
 		Benutzername <input type="text" name="name" />
 	<br></br>
 		Kennwort <input type="text" name="name" />
