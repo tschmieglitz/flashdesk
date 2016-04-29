@@ -9,6 +9,12 @@
 <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+
+<sql:setDataSource var="flashdb" driver="com.mysql.jdbc.Driver"
+     url="http://ts79.ddns.net:3306/"
+     user="peter"  password="wpeter"/>
+     
+     
   <div id="distance"></div>
   <div id="login">
 
