@@ -4,24 +4,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>atozknowledge.com demo loginjsp</title>
+<title>flashdesk loginjsp</title>
 </head>
 <body>
 	<%@ page import="java.sql.*"%>
 	<%@ page import="javax.sql.*"%>
 	<%
-String userid=request.getParameter("username"); 
-session.putValue("id",userid); 
-String pwd=request.getParameter("password"); 
+String id=request.getParameter("username"); 
+session.putValue("id",id); 
+String password=request.getParameter("password"); 
 Class.forName("com.mysql.jdbc.Driver"); 
-java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdesk","peter","wpeter"); 
+java.sql.Connection con = DriverManager.getConnection("jdbc:ts79.ddns.net:3306/flashdesk","peter","wpeter"); 
 Statement st= con.createStatement(); 
-ResultSet rs=st.executeQuery("select * from initiator where id='"+userid+"'"); 
+ResultSet rs=st.executeQuery("select * from initiator where id='"+id+"'"); 
 if(rs.next()) 
 { 
-if(rs.getString(2).equals(pwd)) 
+if(rs.getString(2).equals(password)) 
 { 
-out.println("welcome"+userid); 
+out.println("welcome"+id); 
 
 } 
 else 
