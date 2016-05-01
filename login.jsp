@@ -1,31 +1,38 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>flashdesk</title>
-<link href="style.css" type="text/css" rel="stylesheet">
-</head>
-<body>
-
-<sql:setDataSource var="flashdb" driver="com.mysql.jdbc.Driver"
-     url="http://ts79.ddns.net:3306/"
-     user="peter"  password="wpeter"/>
-     
-     
-  <div id="distance"></div>
-  <div id="login">
-
-	<h1 style="color: red; size:8">Benutzeranmeldung</h1>
-	<form action="flashdesk.jsp" method="post">
-		Benutzername <input type="text" name="name" />
-	<br></br>
-		Kennwort <input type="text" name="name" />
-		<br></br>
-		<input type="submit" name="submit" value="Anmelden" /> 	
-	</form>
-</div>
-</body>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Login Demo with JSP</title>
+    </head>
+    <body>
+        <form method="post" action="val.jsp">
+            <center>
+            <table border="1" cellpadding="5" cellspacing="2">
+                <thead>
+                    <tr>
+                        <th colspan="2">Login</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Benutzername</td>
+                        <td><input type="text" name="username" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password" required/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" value="Login" />
+                            &nbsp;&nbsp;
+                            <input type="reset" value="Abbruch" />
+                        </td>                        
+                    </tr>                    
+                </tbody>
+            </table>
+            </center>
+        </form>
+    </body>
 </html>
+
