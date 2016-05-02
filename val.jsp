@@ -9,10 +9,14 @@
         pst.setString(1, username);
         pst.setString(2, password);
         ResultSet rs = pst.executeQuery();                        
-        if(rs.next())           
-           out.println("Password ist richtig, Login ok.");        
-        else
-           out.println("falsches Password. Bitte erneut versuchen");            
+       if(rs.next())      
+       { %>
+       <%@     include file="/ticket.jsp" %>
+       <%  }else {%>
+       <%@     include file="/pw_error.jsp" %>
+       <% 
+        }
+                      
    }
   catch(Exception e){       
      out.println("Fehler. Datenbankanbindung fehlerhaft!!");       
