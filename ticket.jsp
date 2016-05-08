@@ -1,15 +1,40 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Insert title here</title>
-
-<h1>Hello this is a ticket :-)</h1>
-</head>
-<body>
-
-</body>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Ticket</title>
+    </head>
+    <body>
+        <form method="post" action="TicketSend.jsp">
+            <center>
+            <table border="1" width="30%" cellpadding="5">
+                <thead>
+                    <tr>
+                        <th colspan="2">Ticket absenden</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TicketID</td>
+                        <td><input type="text" name="ticketid" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Beschreibung</td>
+                        <td><input type="text" name="beschreibung" value="" /></td>
+                    </tr>
+                                        <tr>
+                        <td>Fehlertyp</td>
+                        <td><input type="text" name="ftyp" value="" /></td>
+                    </tr>
+                      
+                    <tr>
+                        <td><input type="submit" value="Absenden" /></td>
+                        <td><input type="reset" value="Abbruch" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            </center>
+        </form>
+    </body>
 </html>

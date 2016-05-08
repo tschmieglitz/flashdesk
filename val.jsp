@@ -1,7 +1,8 @@
 <%@ page import ="java.sql.*" %>
 <%
+
    try{
-        String username = request.getParameter("username");   
+	    String username = request.getParameter("username");   
         String password = request.getParameter("password");
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
         Connection conn = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb","admin","herbert");    
