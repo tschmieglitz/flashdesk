@@ -2,42 +2,46 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <title>Registration</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registration</title>
+        <meta name="author" content="Jerome Morin, Peter Wachsmann, Thomas schmieglitz "/>
+        <meta name="language" content="deutsch"/>
+                <link rel="stylesheet" type="text/css" href="css/style.css"/>
     </head>
     <body>
         <form method="post" action="registration.jsp">
-            <center>
-            <table border="1" width="30%" cellpadding="5">
-                <thead>
-                    <tr>
-                        <th colspan="2">Benutzer Anlegen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Vorname</td>
-                        <td><input type="text" name="fname" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Nachname</td>
-                        <td><input type="text" name="lname" value="" /></td>
-                    </tr>
-                                   <tr>
-                        <td>Benutzername</td>
-                        <td><input type="text" name="user" value="" /></td>
-                    </tr>    
-                    <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="pass" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="Submit" /></td>
-                        <td><input type="reset" value="Reset" /></td>
-                    </tr>
-                </tbody>
-            </table>
-            </center>
-        </form>
+    		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-12">
+						<h1>flashdesk Benutzeanmeldung</h1>
+					</div> 
+				</div>
+			</div>
+		</header>
+
+		<div class="main">
+			<div class="container">
+				<div class="row">
+					<form class="form">
+						<div class="col-xs-8 col-md-10">
+							<input id="comment" type="text" name="fname" placeholder="Vorname">
+							<input id="comment" type="text" name="lname" placeholder="Nachname">
+							<input id="comment" type="text" name="user" placeholder="Benutzername">
+							<input id="comment" type="text" name="pass" placeholder="Passwort">
+	
+								</div>
+						</form>
+				</div>
+			<div class "col-xs-4 col-md-2">
+							<button type="submit" class="btn">Submit</button>
+							<button type="reset" class="btn">Reset</button>
+						</div>
+						
+		</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="script.js"></script>
+</form>
     </body>
 </html>
