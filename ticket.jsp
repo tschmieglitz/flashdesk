@@ -2,39 +2,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author"
+	content="Jerome Morin, Peter Wachsmann, Thomas schmieglitz " />
+<meta name="language" content="deutsch" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
         <title>Ticket</title>
     </head>
     <body>
         <form method="post" action="TicketSend.jsp">
-            <center>
-            <table border="1" width="30%" cellpadding="5">
-                <thead>
-                    <tr>
-                        <th colspan="2">Ticket absenden</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>TicketID</td>
-                        <td><input type="text" name="ticketid" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Beschreibung</td>
-                        <td><input type="text" name="beschreibung" value="" /></td>
-                    </tr>
-                                        <tr>
-                        <td>Fehlertyp</td>
-                        <td><input type="text" name="ftyp" value="" /></td>
-                    </tr>
-                      
-                    <tr>
-                        <td><input type="submit" value="Absenden" /></td>
-                        <td><input type="reset" value="Abbruch" /></td>
-                    </tr>
-                </tbody>
-            </table>
-            </center>
+            <form method="post" action="val.jsp">
+
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-12">
+						<h1>Ticket flashdesk</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="main">
+			<div class="container">
+				<div class="row">
+					<form class="form">
+						<div class="col-xs-8 col-md-10">
+							<input id="comment" type="text" name="beschreibung" placeholder="Beschreibung"> 
+								<input id="comment"	type="text" name="ftyp" placeholder="Fehlertyp">
+
+						</div>
+					</form>
+				</div>
+				<divclass"col-xs-4col-md-2">
+				<button type="submit" class="btn">Send</button>
+				<button type="reset" class="btn">Reset</button>
+			</div>
+
+		</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="script.js"></script>
+	</form>
         </form>
     </body>
 </html>

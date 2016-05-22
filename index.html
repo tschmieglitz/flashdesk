@@ -1,53 +1,46 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>flashdesk</title>
-		<meta name="author" content="Jerome Morin, Peter Wachsmann, Thomas schmieglitz "/>
-		<meta name="descriotion" content="Helpdesk"/>
-		<meta name="language" content="deutsch"/>
-		<link rel="stylesheet" type="text/css" href="css/layout.css"/>
-				
-		    </head>	
-			<body style="background-color: #CECECE">
-
-	<div id="alles">
-<!-- Head -->
-
-	<div id="header">
-	<img src="bilder/kopfbild_1.gif" height="71" width="900" alt="Ueberschrift" id="logo"/>
+<!DOCTYPE html>
+<html>
+<head>
+<title>flashdesk</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author"
+	content="Jerome Morin, Peter Wachsmann, Thomas schmieglitz " />
+<meta name="language" content="deutsch" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<form method="post" action="login.jsp">
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-12">
+						<h1>flashdesk</h1>
+					</div>
+				</div>
 			</div>
+		</header>
+<div class="main">
+			<div class="container">
+				<div class="row">
+					<form class="form">
+						<div class="col-xs-8 col-md-10">
+							<form method="post" action ="login.jsp">		
+						<div class "col-xs-4 col-md-2">
+							<button type="submit" class="btn">Ticket anlegen  </button>
+						</div>
+						
+						<form method="post" action="register.jsp">
+							<br><br>
+						</form>
 				
-<!-- Kopfzeile -->	
+<div class "col-xs-4 col-md-2">
+							<button type="submit" class="btn">Benutzer anlegen</button>
+						</div>
 
-	<div id="kopfzeile">
-</div>
-<div id="content">
-
-<p>
-<br />
-</p> 
-<br></br>
-
-<h1>flashdesk</h1>
-	<p>
-	Ticket aufgeben 
-	<form method="post" action ="login.jsp">
-		<input name="ticket" type="submit" value="Ticket anlegen" /></form>
-	Benutzer anlegen<br />
-	<form method="post" action="register.jsp">
-		<input name="Benutzer anlegen" type="submit" value="Benutzer anlegen" /></form>
-<br />
-</p>
-
-</div>
-
-
-
-<!-- Anfang Inhalt Mitte -->
-
-<!-- Fußzeile unten -->
-
-</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="script.js"></script>
+	</form>
 </body>
 </html>
