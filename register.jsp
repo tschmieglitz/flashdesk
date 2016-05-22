@@ -23,14 +23,10 @@
                         <td>Nachname</td>
                         <td><input type="text" name="lname" value="" /></td>
                     </tr>
-                                        <tr>
+                                   <tr>
                         <td>Benutzername</td>
                         <td><input type="text" name="user" value="" /></td>
-                    </tr>
-                                        <tr>
-                        <td>ID</td>
-                        <td><input type="id" name="id" value="" /></td>
-                    </tr>
+                    </tr>    
                     <tr>
                         <td>Password</td>
                         <td><input type="password" name="pass" value="" /></td>

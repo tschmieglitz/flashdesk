@@ -6,7 +6,7 @@
         String password = request.getParameter("password");
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
         Connection conn = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb","admin","herbert");    
-        PreparedStatement pst = conn.prepareStatement("Select user,pass from initiator where user=? and pass=?");
+        PreparedStatement pst = conn.prepareStatement("Select user,pass from user where user=? and pass=?");
         pst.setString(1, username);
         pst.setString(2, password);
         ResultSet rs = pst.executeQuery();                        
