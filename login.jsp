@@ -25,11 +25,12 @@
 		<div class="main">
 			<div class="container">
 				<div class="row">
-					<form class="form">
+					<form class="form" >
 						<div class="col-xs-8 col-md-10">
 							<input id="comment" type="text" name="username"
-								placeholder="Benutzername"> <input id="comment"
-								type="text" name="password" placeholder="Passwort">
+								placeholder="Benutzername"> 
+								<input id="comment"
+								type="password" name="password" placeholder="Passwort">
 
 						</div>
 					</form>
