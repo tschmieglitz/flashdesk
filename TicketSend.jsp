@@ -7,7 +7,7 @@
 	content="Jerome Morin, Peter Wachsmann, Thomas schmieglitz " />
 <meta name="language" content="deutsch" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
-<title>Ticket versendet!!!</title>
+<title>Ticket versendet</title>
 </head>
 <body>
 
@@ -25,8 +25,6 @@
     int i = st.executeUpdate("insert into ticket(beschreibung, ftyp) values ('" + beschreibung + "','" + ftyp + "')");
 
 %>
-
-	<h2>Ticket wurde versendet!!!</h2>
-
+<%@     include file="/SendEmail.jsp" %>
 </body>
 </html>
