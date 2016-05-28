@@ -9,10 +9,10 @@
 <title>Password Error</title>
 </head>
 <body>
-<h2>Password Error</h2>
 <ul class="comments" id="comments">
-					<li>Falsches Passwort!!</li>
-					
+					<li>Benutzername oder Password sind falsch.</li>
+					<li>Bitte versuchen Sie es erneut.</li>
+					<%@     include file="/login.jsp" %>
 				</ul>
 
 </body>
