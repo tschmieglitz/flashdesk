@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-	<form>
+	<form >
 		<header class="header">
 			<div class="container">
 				<div class="row">
@@ -37,7 +37,9 @@
 				<table>
 					<tr>
 						<td style="width: 90px">TicketID</td>
-						<td>Bezeichnung</td>
+						<td style="width: 350px">Bezeichnung</td>
+						<td style="width: 150px">Fehlertyp</td>
+						<td>Status</td>
 					</tr>
 				</table>
 				<%
@@ -47,7 +49,14 @@
 				<table>
 					<tr>
 						<td style="width: 90px"><%=rss.getString(1)%></td>
-						<td><%=rss.getString(2)%></td>
+						<td style ="width: 350px"><%=rss.getString(2)%></td>
+						<td style ="width: 150px"><%=rss.getString(5)%></td>
+						<td style ="width: 100px"> <%=rss.getString(6)%></td>
+						<td> 
+				<divclass"col-xs-4col-md-2">
+				<button type="button" class="btn"  >erledigt</button>
+							</div></td>
+							
 					</tr>
 				</table>
 				<%
