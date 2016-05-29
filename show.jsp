@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-	<form >
+	<form method="post" action="aendernStatus.jsp">
 		<header class="header">
 			<div class="container">
 				<div class="row">
@@ -46,23 +46,26 @@
 					while (rss.next()) {
 				%>
 
+
 				<table>
 					<tr>
 						<td style="width: 90px"><%=rss.getString(1)%></td>
-						<td style ="width: 350px"><%=rss.getString(2)%></td>
-						<td style ="width: 150px"><%=rss.getString(5)%></td>
-						<td style ="width: 100px"> <%=rss.getString(6)%></td>
-						<td> 
-				<divclass"col-xs-4col-md-2">
-				<button type="button" class="btn"  >erledigt</button>
-							</div></td>
-							
-					</tr>
-				</table>
-				<%
+						<td style="width: 350px"><%=rss.getString(2)%></td>
+						<td style="width: 150px"><%=rss.getString(5)%></td>
+						<td style="width: 100px"><%=rss.getString(6)%></td>
+						<td><divclass"col-xs-4col-md-2">
+							<button type="submit" class="btn" name="ticketid"
+								value="<%=rss.getString(1)%>">erledigt</button>
+			</div>
+			</td>
+
+
+			</tr>
+			</table>
+			<%
 }
 %>
-			</div>
+		</div>
 		</div>
 	</form>
 </body>
