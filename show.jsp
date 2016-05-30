@@ -46,13 +46,13 @@
 					while (rss.next()) {
 				%>
 
-
+<ul class="comments" id="comments">
 				<table>
 					<tr>
-						<td style="width: 90px"><%=rss.getString(1)%></td>
-						<td style="width: 350px"><%=rss.getString(2)%></td>
-						<td style="width: 150px"><%=rss.getString(5)%></td>
-						<td style="width: 100px"><%=rss.getString(6)%></td>
+						<li><td style="width: 90px"><%=rss.getString(1)%></td></li>
+						<li><td style="width: 350px"><%=rss.getString(2)%></td></li>
+						<li><td style="width: 150px"><%=rss.getString(5)%></td></li>
+						<li><td style="width: 100px"><%=rss.getString(6)%></td></li>
 						<td><divclass"col-xs-4col-md-2">
 							<button type="submit" class="btn" name="ticketid"
 								value="<%=rss.getString(1)%>">erledigt</button>
