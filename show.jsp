@@ -34,38 +34,36 @@
 		%>
 		<div>
 			<div>
-				<table>
-					<tr>
-						<td style="width: 90px">TicketID</td>
-						<td style="width: 350px">Bezeichnung</td>
-						<td style="width: 150px">Fehlertyp</td>
-						<td>Status</td>
-					</tr>
-				</table>
-				<%
-					while (rss.next()) {
-				%>
+				<ul class="commentsTicket" id="commentsTicket">
+					<table>
+						<tr>
+							<td style="width: 100px"><li class="ticket">Ticket</li></td>
+							<td style="width: 350px"><li class="ticket">Bezeichnung</li></td>
+							<td style="width: 150px"><li class="ticket">Fehlertyp</li></td>
+							<td style="width: 100px"><li class="ticket">Status</li></td>
+						</tr>
+					</table>
+					<%
+						while (rss.next()) {
+					%>
 
-<ul class="comments" id="comments">
-				<table>
-					<tr>
-						<li><td style="width: 90px"><%=rss.getString(1)%></td></li>
-						<li><td style="width: 350px"><%=rss.getString(2)%></td></li>
-						<li><td style="width: 150px"><%=rss.getString(5)%></td></li>
-						<li><td style="width: 100px"><%=rss.getString(6)%></td></li>
-						<td><divclass"col-xs-4col-md-2">
-							<button type="submit" class="btn" name="ticketid"
-								value="<%=rss.getString(1)%>">erledigt</button>
+
+					<table>
+						<tr >
+							<td style="width: 100px"><li class="ticket"><%=rss.getString(1)%></li></td>
+							<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
+							<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
+							<td style="width: 150px"><li class="ticket"><%=rss.getString(6)%></li></td>
+							<td valign="middle" align="center"><divclass"col-xs-4col-md-2">
+								<button type="submit" class="btnTicket" name="ticketid"
+									value="<%=rss.getString(1)%>">erledigt</button></td>
+						</tr>
+					</table>
+					<%
+						}
+					%>
+				
 			</div>
-			</td>
-
-
-			</tr>
-			</table>
-			<%
-}
-%>
-		</div>
 		</div>
 	</form>
 </body>

@@ -52,16 +52,49 @@ button.btn:hover{
 	color: #fff;
 }
 
+button.btnTicket{
+	background: transparent;
+	border:2px solid #000;
+
+	color: #00f28f;
+	cursor: pointer;
+
+	font-size: 26px;
+
+	padding: 6px 10px;
+
+	transition: background 2s, color 2s;
+}
+
+button.btnTicket:hover{
+	background: #00f28f;
+	color: #fff;
+}
+
+
 .comments{
 	margin-top: 20px;
 	list-style: none;
 	padding-left: 0px;
+}
+.commentsTicket{
+	margin-top: 16 px;
+	list-style: none;
+	padding-left: 0px;
+	
 }
 
 li{
 	padding-left: 20px;
 	border-left: 2px solid #000;
 	font-size: 36px;
-	margin: 0 0 36px;
+	margin: 0 0 36px;	
+	
+}
+li.ticket{
+	padding-left: 20px;
+	font-size: 26px;
+	margin: 0 0 36px;	
+	
 }
 
