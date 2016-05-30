@@ -9,7 +9,19 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
         <title>Ticket</title>
     </head>
-    <body>
+	<!-- Folgend Implementierung von Javascript, damit sich das Beschreibungsfeld automatisch in der Höhe an den eingegebenen Text anpasst  -JM 30.05.2016- -->
+	<script type="text/javascript">
+	    function adjustIt(){
+		    var a = document.getElementById("beschreibung");
+		    var b = a.value.match(/\n/gi);
+		    var r = parseInt((a.value.length + 10) / a.cols, 10);
+		    if (r>0) a.rows = r; else a.rows = 1;
+		    if(b) a.rows += b.length;
+		    a.rows++;
+    	}
+    </script>
+	<!-- Das Body-Element wird um die onLoad-Funktion zum Laden der JavaScript-Function "adjustIt" erweitert -JM 30.05.2016- -->
+    <body onLoad="adjustIt()">
         <form method="post" action="TicketSend.jsp">
             <form method="post" action="val.jsp">
 
@@ -28,8 +40,10 @@
 				<div class="row">
 					<form class="form">
 						<div class="col-xs-8 col-md-10">
+							<!-- Beschreibung wird um die ID zur Identifikation für die JavaScript Funktion, sowie um den Wert der Cols zur Berechnung
+							innerhalb der Funktion erweitert -JM 30.05.2016- -->
 							<input id="comment" type="text" name="beschreibung" placeholder="Beschreibung"> 
-								<input id="comment"	type="text" name="ftyp" placeholder="Fehlertyp">
+							<input id="comment"	type="text" name="ftyp" placeholder="Fehlertyp">
 
 						</div>
 					</form>
