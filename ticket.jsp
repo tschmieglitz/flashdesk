@@ -40,7 +40,8 @@
 			<div class="container">
 				<div class="row">
 					<form class="form">
-						<div class="col-xs-8 col-md-10">
+					<!-- xs vorher 8, md 10 -->
+						<div class="col-xs-10 col-md-12">
 							<!-- Beschreibung wird um die ID zur Identifikation für die JavaScript Funktion, sowie um den Wert der Cols zur Berechnung
 							innerhalb der Funktion erweitert -JM 30.05.2016- -->
 							<input id="comment" type="text" name="beschreibung" placeholder="Beschreibung"> 
