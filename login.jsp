@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<Link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserat:400,700' />
+<Link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="author"
-	content="Jerome Morin, Peter Wachsmann, Thomas schmieglitz " />
+<meta name="author" content="Jerome Morin, Peter Wachsmann, Thomas schmieglitz " />
 <meta name="language" content="deutsch" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <title>Login flashdesk</title>
@@ -26,7 +27,7 @@
 			<div class="container">
 				<div class="row">
 					<form class="form" >
-						<div class="col-xs-8 col-md-10">
+						<div class="col-xs-12 col-md-12">
 							<input id="comment" type="text" name="username"
 								placeholder="Benutzername"> 
 								<input id="comment"
@@ -35,7 +36,7 @@
 						</div>
 					</form>
 				</div>
-				<divclass"col-xs-4col-md-2">
+				<divclass"col-xs-2 col-md-1">
 				<button type="submit" class="btn">Login</button>
 				<button type="reset" class="btn">Reset</button>
 				<button type="reset" class="btn" onClick="javascript:history.go(-1)">Back</button>
