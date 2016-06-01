@@ -22,7 +22,7 @@
     Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb","admin","herbert");
     Statement st = con.createStatement();
     //ResultSet rs;
-    int i = st.executeUpdate("insert into ticket(beschreibung, ftyp) values ('" + beschreibung + "','" + ftyp + "')");
+    int i = st.executeUpdate("insert into ticket(beschreibung, ftyp, state) values ('" + beschreibung + "','" + ftyp + "', 'offen')");
 
 %>
 <%@     include file="/SendEmail.jsp" %>
