@@ -1,4 +1,4 @@
-<%@ page import ="java.sql.*" %>
+<%@ page import="java.sql.*"%>
 <%
     String user = request.getParameter("user");    
     String pwd = request.getParameter("pass");
@@ -10,37 +10,37 @@
     Statement st = con.createStatement();
     
     if (user.equals (""))
-    { %> 
- 	 <% out.println("Das Feld BENUTZERNAME muss ausgefüllt werden." );%>
- 	 <%@     include file="/register.jsp"%>
- 	 <%  }else {%>  
- 	 <% 
+    { %>
+<% out.println("Das Feld BENUTZERNAME muss ausgefüllt werden." );%>
+<%@     include file="/register.jsp"%>
+<%  }else {%>
+<% 
  	if (pwd.equals (""))
-    { %> 
- 	 <% out.println("Das Feld PASSWORT muss ausgefüllt werden." );%>
- 	 <%@     include file="/register.jsp"%>
- 	 <%  }else {%>  
- 	 <%    
+    { %>
+<% out.println("Das Feld PASSWORT muss ausgefüllt werden." );%>
+<%@     include file="/register.jsp"%>
+<%  }else {%>
+<%    
  	if (fname.equals (""))
-    { %> 
- 	 <% out.println("Das Feld VORNAME muss ausgefüllt werden." );%>
- 	 <%@     include file="/register.jsp"%>
- 	 <%  }else {%>  
- 	 <%  
+    { %>
+<% out.println("Das Feld VORNAME muss ausgefüllt werden." );%>
+<%@     include file="/register.jsp"%>
+<%  }else {%>
+<%  
  	if (lname.equals (""))
-    { %> 
- 	 <% out.println("Das Feld NACHNAME muss ausgefüllt werden." );%>
- 	 <%@     include file="/register.jsp"%>
- 	 <%  }else {%>  
- 	 <%
+    { %>
+<% out.println("Das Feld NACHNAME muss ausgefüllt werden." );%>
+<%@     include file="/register.jsp"%>
+<%  }else {%>
+<%
  	
  	 //ResultSet rs;
     int i = st.executeUpdate("insert into user(fname, lname, user,  pass) values ('" + fname + "','" + lname + "','" + user + "','" + pwd + "')");
     out.println("Ihr Benutzerkonto ist angelegt. Bitte loggen Sie sich ein:");
-    { %> 
-    
-    <%@     include file="/login.jsp"%>
- 	  <%
+    { %>
+
+<%@     include file="/login.jsp"%>
+<%
  	 }
  	 }
  	 }
@@ -48,4 +48,4 @@
  	 }  
  	 
     %>
-   
+

@@ -50,7 +50,7 @@
 
 					<table>
 						<tr >
-							<td style="width: 100px"><li class="ticket"><%=rss.getString(1)%></li></td>
+							<td style="width: 100px ; height: 50px" ><li class="ticket"><%=rss.getString(1)%></li></td>
 							<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
 							<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
 							<td style="width: 150px"><li class="ticket"><%=rss.getString(6)%></li></td>
@@ -62,7 +62,7 @@
 					<%
 						}
 					%>
-				
+				<button type="reset" class="btn" onClick="javascript:history.go(-2)">Back</button>
 			</div>
 		</div>
 	</form>

@@ -51,6 +51,7 @@
 				<divclass"col-xs-4col-md-2">
 				<button type="submit" class="btn">Send</button>
 				<button type="reset" class="btn">Reset</button>
+				<button type="reset" class="btn" onClick="javascript:history.go(-1)">Back</button>
 			</div>
 
 		</div>
