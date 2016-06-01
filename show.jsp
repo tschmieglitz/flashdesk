@@ -3,6 +3,8 @@
 <html>
 <head>
 <title>Ticket Übersicht</title>
+<Link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserat:400,700' />
+<Link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="author"
 	content="Jerome Morin, Peter Wachsmann, Thomas schmieglitz " />
