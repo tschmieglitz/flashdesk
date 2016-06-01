@@ -54,7 +54,7 @@
 								<input id="comment" type="text" name="beschreibung"
 									placeholder="Beschreibung"> <input id="comment"
 									type="text" name="ftyp" placeholder="Fehlertyp" list="Fehler">
-								<datalist id="Fehler">
+								<datalist id="Fehler" class="datalist">
 									<option>Software</option>
 									<option>Hardware</option>
 									<option>Peripherie</option>
