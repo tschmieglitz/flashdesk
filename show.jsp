@@ -64,7 +64,7 @@
 					<%
 						}
 					%>
-				<button type="reset" class="btn" onClick="javascript:history.go(-2)">Back</button>
+				<button type="reset" class="btn" onClick="javascript:history.go(-2)" style="margin-left:30px;">Back</button>
 			</div>
 		</div>
 	</form>
