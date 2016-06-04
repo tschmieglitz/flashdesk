@@ -68,7 +68,7 @@ button.btn:hover{
 button.btnTicket{
 	background: transparent;
 	border:2px solid #000;
-
+margin-bottom: 30px;
 	color: #00f28f;
 	cursor: pointer;
 
