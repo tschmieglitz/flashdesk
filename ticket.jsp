@@ -62,11 +62,11 @@
 							</div>
 						</form>
 					</div>
-					<divclass"col-xs-4col-md-2">
-					<button type="submit" class="btn">Send</button>
-					<button type="reset" class="btn">Reset</button>
-					<button type="reset" class="btn"
-						onClick="javascript:history.go(-1)">Back</button>
+					<divclass"col-xs-2col-md-2">
+					<!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
+					<button type="submit" class="btn">Absenden</button>
+					<button type="reset" class="btn">Eingaben löschen</button>
+					<button type="reset" class="btn" onClick="javascript:history.go(-1)">Zurüc</button>
 				</div>
 
 			</div>
