@@ -36,10 +36,11 @@
 						</div>
 					</form>
 				</div>
-				<div class "col-xs-4col-md-2">
-					<button type="submit" class="btn">Submit</button>
-					<button type="reset" class="btn">Reset</button>
-					<button type="reset" class="btn" onClick="javascript:history.go(-1)">Back</button>
+				<!-- Sprachänderung und Button verkleinern - JM -->
+				<div class "col-xs-2 col-md-2">
+					<button type="submit" class="btn">Absenden</button>
+					<button type="reset" class="btn">Eingaben löschen</button>
+					<button type="reset" class="btn" onClick="javascript:history.go(-1)">Zurück</button>
 				</div>
 
 			</div>
