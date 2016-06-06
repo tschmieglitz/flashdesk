@@ -64,7 +64,15 @@
 					<%
 						}
 					%>
-				<button type="reset" class="btn" onClick="javascript:history.go(-2)" style="margin-left:30px;">Back</button>
+			</div>
+			
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2 col-md-2">
+						<!-- Sprachänderung und Button verkleinern - JM -->
+						<button type="reset" class="btn" onClick="javascript:history.go(-2)" style="margin-left:30px;">Zurück</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</form>
