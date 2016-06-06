@@ -66,7 +66,7 @@
 					<!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
 					<button type="submit" class="btn">Absenden</button>
 					<button type="reset" class="btn">Eingaben löschen</button>
-					<button type="reset" class="btn" onClick="javascript:history.go(-1)">Zurüc</button>
+					<button type="reset" class="btn" onClick="javascript:history.go(-1)">Zurück</button>
 				</div>
 
 			</div>
