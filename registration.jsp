@@ -4,7 +4,7 @@
     String pwd = request.getParameter("pass");
     String fname = request.getParameter("fname");
     String lname = request.getParameter("lname"); 
-    //String id = request.getParameter("id");
+    String mail = request.getParameter("mail");
         Class.forName("com.mysql.jdbc.Driver");
     Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb","admin","herbert");
     Statement st = con.createStatement();
@@ -33,7 +33,12 @@
 <%@     include file="/register.jsp"%>
 <%  }else {%>
 <%
- 	
+	if (mail.equals (""))
+{ %>
+<% out.println("Bitte geben Sie eine E-Mail Adresse an." );%>
+<%@     include file="/register.jsp"%>
+<%  }else {%>
+<%
  	 //ResultSet rs;
     int i = st.executeUpdate("insert into user(fname, lname, user,  pass) values ('" + fname + "','" + lname + "','" + user + "','" + pwd + "')");
     out.println("Ihr Benutzerkonto ist angelegt. Bitte loggen Sie sich ein:");
@@ -46,6 +51,6 @@
  	 }
  	 } 
  	 }  
- 	 
+}
     %>
 

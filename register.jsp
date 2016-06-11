@@ -32,6 +32,7 @@
 								name="lname" placeholder="Nachname"> <input id="comment"
 								type="text" name="user" placeholder="Benutzername"> <input
 								id="comment" type="text" name="pass" placeholder="Passwort">
+								 <input id="comment" type="text" name="mail" placeholder="E-Mail Adresse">
 
 						</div>
 					</form>
