@@ -40,7 +40,7 @@
 <%  }else {%>
 <%
  	 //ResultSet rs;
-    int i = st.executeUpdate("insert into user(fname, lname, user,  pass) values ('" + fname + "','" + lname + "','" + user + "','" + pwd + "')");
+    int i = st.executeUpdate("insert into user(fname, lname, user,  pass, mail) values ('" + fname + "','" + lname + "','" + user + "','" + pwd + "','" + mail + "')");
     out.println("Ihr Benutzerkonto ist angelegt. Bitte loggen Sie sich ein:");
     { %>
 
@@ -51,6 +51,6 @@
  	 }
  	 } 
  	 }  
-}
+     }
     %>
 
