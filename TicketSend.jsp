@@ -17,6 +17,7 @@
 	<%
     String ticketid = request.getParameter("ticketid");    
     String beschreibung = request.getParameter("beschreibung");
+    String user = request.getParameter("user");
     String ftyp = request.getParameter("ftyp");
          Class.forName("com.mysql.jdbc.Driver");
     Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb","admin","herbert");
@@ -35,13 +36,11 @@
  	 <%  }else {%>  
  	 <% 
  	  //ResultSet rs;
-    int i = st.executeUpdate("insert into ticket(beschreibung, ftyp, state) values ('" + beschreibung + "','" + ftyp + "', 'offen')");
+    int i = st.executeUpdate("insert into ticket(beschreibung, ftyp, user, state) values ('" + beschreibung + "','" + ftyp + "', '" + user + "', 'offen')");
     { %> 
- 	  <%@     include file="/SendEmail.jsp" %>
- 	  <% 
+ 	<%@     include file="/SendEmail.jsp" %>
+ 	  <%  
  	 }}}
  	%>
- 	
-   
     </body>
 </html>

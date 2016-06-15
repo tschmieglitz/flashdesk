@@ -51,7 +51,10 @@
 							<div class="col-xs-12 col-md-12">
 								<!-- Beschreibung wird um die ID zur Identifikation für die JavaScript Funktion, sowie um den Wert der Cols zur Berechnung
 							innerhalb der Funktion erweitert -JM 30.05.2016- -->
-								<input id="comment" type="text" name="beschreibung"
+
+								<input type="hidden" "name="user" id="comment" type="text"
+									value="<%= session.getAttribute( "theName" ) %>"> <input
+									id="comment" type="text" name="beschreibung"
 									placeholder="Beschreibung"> <input id="comment"
 									type="text" name="ftyp" placeholder="Fehlertyp" list="Fehler">
 								<datalist id="Fehler" class="datalist">
@@ -59,14 +62,15 @@
 									<option>Hardware</option>
 									<option>Peripherie</option>
 								</datalist>
+
 							</div>
 						</form>
 					</div>
-					<divclass"col-xs-2col-md-2">
-					<!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
+					<divclass"col-xs-2col-md-2"> <!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
 					<button type="submit" class="btn">Absenden</button>
 					<button type="reset" class="btn">Eingaben löschen</button>
-					<button type="reset" class="btn" onClick="javascript:history.go(-1)">Zurück</button>
+					<button type="reset" class="btn"
+						onClick="javascript:history.go(-1)">Zurück</button>
 				</div>
 
 			</div>
