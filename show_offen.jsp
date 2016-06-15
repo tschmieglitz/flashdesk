@@ -30,7 +30,7 @@
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb", "admin", "herbert");
 			Statement st = con.createStatement();
-			String query = "select * from ticket";
+			String query = "select * from ticket where state = 'offen'";
 			//String query="select * from info where username='"+username+"'";
 			ResultSet rss = st.executeQuery(query);
 		%>
@@ -75,7 +75,7 @@
 
 <form method="post" action="show_erledigt.jsp">
 					<div class="col-xs-2 col-md-2">
-						<button type="submit" class="btn" style="margin-left:30px;">erledigt</button>
+						<button type="submit" class="btn" style="margin-left:30px;">erledigte</button>
 					</div>
 </form>
 
