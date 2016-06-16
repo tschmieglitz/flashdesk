@@ -52,7 +52,7 @@
 								<!-- Beschreibung wird um die ID zur Identifikation für die JavaScript Funktion, sowie um den Wert der Cols zur Berechnung
 							innerhalb der Funktion erweitert -JM 30.05.2016- -->
 
-								<input name="user" id="comment" type="text"
+								<input type="hidden" name="user" id="comment" type="text"
 									value="<%= session.getAttribute( "theName" ) %>"> <input
 									id="comment" type="text" name="beschreibung"
 									placeholder="Beschreibung"> <input id="comment"
