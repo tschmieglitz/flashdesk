@@ -23,7 +23,24 @@
     Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb","admin","herbert");
     Statement st = con.createStatement();
     
-    out.println(user);
+    if (beschreibung.equals (""))
+    { %> 
+ 	 <% out.println("Das Feld BESCHREIBUNG muss ausgefüllt werden." );%>
+ 	 <%@     include file="/ticket.jsp"%>
+ 	 <%  }else {%>  
+ 	 <% 
+ 	if (ftyp.equals (""))
+    { %> 
+ 	 <% out.println("Das Feld FEHLERTYP muss ausgefüllt werden." );%>
+ 	 <%@     include file="/ticket.jsp"%>
+ 	 <%  }else {%>  
+ 	 <% 
+ 	  //ResultSet rs;
+    int i = st.executeUpdate("insert into ticket(beschreibung, ftyp, user, state) values ('" + beschreibung + "','" + ftyp + "', '" + user + "', 'offen')");
+    { %> 
+ 	
+ 	  <%  
+ 	 }}}
  	%>
     </body>
 </html>
