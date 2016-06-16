@@ -38,7 +38,7 @@
  	  //ResultSet rs;
     int i = st.executeUpdate("insert into ticket(beschreibung, ftyp, user, state) values ('" + beschreibung + "','" + ftyp + "', '" + user + "', 'offen')");
     { %> 
- 	
+ 	<%@     include file="/SendEmail.jsp" %>
  	  <%  
  	 }}}
  	%>
