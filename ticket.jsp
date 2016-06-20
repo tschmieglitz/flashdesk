@@ -1,4 +1,18 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%@page import="java.sql.*"%>
+<%@page import="javax.sql.*"%>
+<%@page import="java.sql.Connection"%>
+<%
+	String user = request.getParameter("username");
+	Class.forName("com.mysql.jdbc.Driver");
+	Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb", "admin", "herbert");
+	Statement st = con.createStatement();
+	String query = "select * from ticket where user = '" + user + " '";
+	//String query="select * from info where username='"+username+"'";
+	ResultSet rss = st.executeQuery(query);
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +67,7 @@
 							innerhalb der Funktion erweitert -JM 30.05.2016- -->
 
 								<input type="hidden" name="user" id="comment" type="text"
-									value="<%= session.getAttribute( "theName" ) %>"> <input
+									value="<%=session.getAttribute("theName")%>"> <input
 									id="comment" type="text" name="beschreibung"
 									placeholder="Beschreibung"> <input id="comment"
 									type="text" name="ftyp" placeholder="Fehlertyp" list="Fehler">
@@ -65,6 +79,35 @@
 
 							</div>
 						</form>
+
+
+						<%
+							while (rss.next()) {
+						%>
+						<table border="2" bordercolor="#2494b7">
+							<tr>
+								<th>Beschreibung</th>
+								<th>Datum</th>
+								<th>Fehlertyp</th>
+								<th>Status</th>
+								<th>Hinweis</th>
+								<th>Nutzer</th>
+							</tr>
+							<tr>
+								<td><%=rss.getString(2)%></td>
+								<td><%=rss.getString(3)%></td>
+								<td><%=rss.getString(4)%></td>
+								<td><%=rss.getString(5)%></td>
+								<td><%=rss.getString(6)%></td>
+								<td><%=rss.getString(7)%></td>
+
+							</tr>
+						</table>
+						<%
+							}
+						%>
+
+
 					</div>
 					<divclass"col-xs-2col-md-2"> <!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
 					<button type="submit" class="btn">Absenden</button>
