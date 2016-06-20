@@ -2,6 +2,9 @@
 <%@ page import="javax.mail.internet.*,javax.activation.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <%
+
+String user = request.getParameter("username");
+
    String result;
    // Recipient's email ID needs to be mentioned.
    String to = "thomas.tt929@gmail.com";
@@ -32,7 +35,7 @@
       // Set Subject: header field
       message.setSubject("Ticket!");
       // Now set the actual message
-      message.setText("Es wurde ein neues Ticket erstellt!");
+      message.setText("Es wurde ein neues Ticket erstellt von User: +name+ mit Fehler +bezeichnung+ und +ftyp+");
       // Send message
       Transport.send(message);
       result = "Ihr Ticket wurde versand!";

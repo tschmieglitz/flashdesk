@@ -82,9 +82,9 @@
 		</div>
 	</form>
 
-	<form method="post" action="show_offen.jsp">
+	<form method="post" action="show.jsp">
 		<div class="col-xs-2 col-md-2">
-			<button type="submit" class="btn" style="margin-left: 30px;">offene</button>
+			<button type="submit" class="btn" style="margin-left: 30px;">alle</button>
 		</div>
 </form>	
 
