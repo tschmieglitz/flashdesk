@@ -15,7 +15,7 @@
 </head>
 <body>
 	<form method="post" action="aendernStatus.jsp">
-		<header class="header">
+		<header class="header" id="headerticketsshow">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-12">
