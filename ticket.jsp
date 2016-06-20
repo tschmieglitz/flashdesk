@@ -107,9 +107,8 @@
 							}
 						%>
 
-
 					</div>
-					<divclass"col-xs-2col-md-2"> <!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
+					<div class"col-xs-2col-md-2"> <!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
 					<button type="submit" class="btn">Absenden</button>
 					<button type="reset" class="btn">Eingaben löschen</button>
 					<button type="reset" class="btn"
