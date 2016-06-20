@@ -35,7 +35,7 @@ String user = request.getParameter("username");
       // Set Subject: header field
       message.setSubject("Ticket!");
       // Now set the actual message
-      message.setText("Es wurde ein neues Ticket erstellt von User: +name+ mit Fehler +bezeichnung+ und +ftyp+");
+      message.setText("Es wurde ein neues Ticket erstellt von User: +name_session+ mit Fehler +bezeichnung_session+ und +ftyp_session+");
       // Send message
       Transport.send(message);
       result = "Ihr Ticket wurde versand!";

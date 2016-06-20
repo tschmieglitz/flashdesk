@@ -19,9 +19,9 @@
     String beschreibung = request.getParameter("beschreibung");
     String user = request.getParameter("user");
     String ftyp = request.getParameter("ftyp");
-    session.setAttribute( "name", user);
-    session.setAttribute( "beschreibung", beschreibung);
-    session.setAttribute( "ftyp", ftyp);
+    session.setAttribute( "name_session", user);
+    session.setAttribute( "beschreibung_session", beschreibung);
+    session.setAttribute( "ftyp_session", ftyp);
          Class.forName("com.mysql.jdbc.Driver");
     Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb","admin","herbert");
     Statement st = con.createStatement();
