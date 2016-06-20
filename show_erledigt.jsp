@@ -3,8 +3,10 @@
 <html>
 <head>
 <title>Ticket Übersicht</title>
-<Link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserat:400,700' />
-<Link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'/>
+<Link rel='stylesheet'
+	href='https://fonts.googleapis.com/css?family=Montserat:400,700' />
+<Link rel='stylesheet'
+	href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="author"
 	content="Jerome Morin, Peter Wachsmann, Thomas schmieglitz " />
@@ -34,11 +36,11 @@
 			//String query="select * from info where username='"+username+"'";
 			ResultSet rss = st.executeQuery(query);
 		%>
-		<div>
-			<div>
+		<div class="col-xs-12 col-md-12">
+			<div >
 				<ul class="commentsTicket" id="commentsTicket">
 					<table>
-						<tr>
+						<tr >
 							<td style="width: 100px"><li class="ticket">Ticket</li></td>
 							<td style="width: 350px"><li class="ticket">Bezeichnung</li></td>
 							<td style="width: 150px"><li class="ticket">Fehlertyp</li></td>
@@ -50,9 +52,9 @@
 					%>
 
 
-					<table>
-						<tr >
-							<td style="width: 100px ; height: 50px" ><li class="ticket"><%=rss.getString(1)%></li></td>
+					<table >
+						<tr > 
+							<td style="width: 100px; height: 50px"><li class="ticket"><%=rss.getString(1)%></li></td>
 							<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
 							<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
 							<td style="width: 150px"><li class="ticket"><%=rss.getString(6)%></li></td>
@@ -64,31 +66,32 @@
 					<%
 						}
 					%>
+			</ul>	
 			</div>
-	</form>		
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-2 col-md-2">
-						<!-- Sprachänderung und Button verkleinern - JM -->
-						<button type="reset" class="btn" onClick="javascript:history.go(-2)" style="margin-left:30px;">Zurück</button>
-					</div>
-
-<form method="post" action="show_erledigt.jsp">
-					<div class="col-xs-2 col-md-2">
-						<button type="submit" class="btn" style="margin-left:30px;">erledigte</button>
-					</div>
-</form>
-
-<form method="post" action="show_offen.jsp">
-					<div class="col-xs-2 col-md-2">
-						<button type="submit" class="btn" style="margin-left:30px;">offene</button>
-					</div>
-</form>
-
-				</div>
 			</div>
-			
+	</form>
+	<div class="col-xs-2 col-md-2">
+		<!-- Sprachänderung und Button verkleinern - JM -->
+		<button type="reset" class="btn" onClick="javascript:history.go(-2)"
+			style="margin-left: 30px;">Zurück</button>
+	</div>
+
+	<form method="post" action="show_erledigt.jsp">
+		<div class="col-xs-2 col-md-2">
+			<button type="submit" class="btn" style="margin-left: 30px;">erledigt</button>
 		</div>
-	
+	</form>
+
+	<form method="post" action="show_offen.jsp">
+		<div class="col-xs-2 col-md-2">
+			<button type="submit" class="btn" style="margin-left: 30px;">offene</button>
+		</div>
+</form>	
+
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="script.js"></script>
+
+
 </body>
 </html>
