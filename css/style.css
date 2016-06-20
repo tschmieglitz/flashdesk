@@ -93,8 +93,12 @@ button.btnTicket:hover{
 .commentsTicket{
 	margin-top: 16 px;
 	list-style: none;
-	padding-left: 21px;
+	margin-left: 21px;
 	
+}
+
+headerticketsshow{
+	margin-left: 21px;
 }
 
 li{
