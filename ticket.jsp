@@ -79,34 +79,7 @@
 
 							</div>
 						</form>
-
-
-						<%
-							while (rss.next()) {
-						%>
-						<table border="2" bordercolor="#2494b7">
-							<tr>
-								<th>Beschreibung</th>
-								<th>Datum</th>
-								<th>Fehlertyp</th>
-								<th>Status</th>
-								<th>Hinweis</th>
-								<th>Nutzer</th>
-							</tr>
-							<tr>
-								<td><%=rss.getString(2)%></td>
-								<td><%=rss.getString(3)%></td>
-								<td><%=rss.getString(4)%></td>
-								<td><%=rss.getString(5)%></td>
-								<td><%=rss.getString(6)%></td>
-								<td><%=rss.getString(7)%></td>
-
-							</tr>
-						</table>
-						<%
-							}
-						%>
-
+						
 					</div>
 					<div class"col-xs-2col-md-2"> <!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
 					<button type="submit" class="btn">Absenden</button>
@@ -114,8 +87,43 @@
 					<button type="reset" class="btn"
 						onClick="javascript:history.go(-1)">Zurück</button>
 				</div>
+<br>
+		<br>
+		<br>		
+		<div class="col-xs-12 col-md-12">
+			<div >
+				<ul class="commentsTicket" id="commentsTicket">
+					<table>
+						<tr >
+							<td style="width: 100px"><li class="ticket">Ticket</li></td>
+							<td style="width: 350px"><li class="ticket">Bezeichnung</li></td>
+							<td style="width: 150px"><li class="ticket">Fehlertyp</li></td>
+							<td style="width: 100px"><li class="ticket">Status</li></td>
+						</tr>
+					</table>
+					<%
+						while (rss.next()) {
+					%>
 
+
+					<table >
+						<tr > 
+							<td style="width: 100px; height: 50px"><li class="ticket"><%=rss.getString(1)%></li></td>
+							<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
+							<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
+							<td style="width: 150px"><li class="ticket"><%=rss.getString(6)%></li></td>
+							<td valign="middle" align="center"><divclass"col-xs-4col-md-2">
+
+						</tr>
+					</table>
+					<%
+						}
+					%>
+						</div>	
+			</ul>	
 			</div>
+			</div>
+				
 			</div>
 			<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 			<script src="script.js"></script>
