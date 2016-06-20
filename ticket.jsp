@@ -4,11 +4,11 @@
 <%@page import="javax.sql.*"%>
 <%@page import="java.sql.Connection"%>
 <%
-	String user = request.getParameter("username");
+	String user_ticket = request.getParameter("username");
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb", "admin", "herbert");
 	Statement st = con.createStatement();
-	String query = "select * from ticket where user = '" + user + " '";
+	String query = "select * from ticket where user = '" + user_ticket + " '";
 	//String query="select * from info where username='"+username+"'";
 	ResultSet rss = st.executeQuery(query);
 %>
