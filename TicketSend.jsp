@@ -55,7 +55,7 @@
        // Set Subject: header field
        message.setSubject("Ticket!");
        // Now set the actual message
-       message.setText("Es wurde ein neues Ticket erstellt von User:" +user+);
+       message.setText(user);
        // Send message
        Transport.send(message);
        result = "Ihr Ticket wurde versand!";
