@@ -43,6 +43,7 @@
 		int i = st.executeUpdate("insert into ticket(beschreibung, ftyp, user, state) values ('"
 						+ beschreibung + "','" + ftyp + "', '" + user + "', 'offen')");
 		
+		{ 		
 		String result;
 					// Recipient's email ID needs to be mentioned.
 					String to = "thomas.tt929@gmail.com";
