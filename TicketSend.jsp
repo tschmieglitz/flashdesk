@@ -18,8 +18,8 @@
 
 	<%
 		String ticketid = request.getParameter("ticketid");
-		String beschreibung = request.getParameter("beschreibung");
-		String user = request.getParameter("user");
+		String beschreibung_session = request.getParameter("beschreibung");
+		String user_session = request.getParameter("user");
 		String ftyp = request.getParameter("ftyp");
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb", "admin", "herbert");
@@ -73,8 +73,8 @@
 						// Set Subject: header field
 						message.setSubject("Ticket!");
 						// Now set the actual message
-						message.setText("Es wurde ein neues Ticket erstellt von User:" + user + "\n"
-								+ " mit der Beschreibung:" + beschreibung);
+						message.setText("Es wurde ein neues Ticket erstellt von User:" + user_session + "\n"
+								+ " mit der Beschreibung:" + beschreibung_session);
 						// Send message
 						Transport.send(message);
 						result = "Ihr Ticket wurde versand!";
