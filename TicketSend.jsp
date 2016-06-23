@@ -18,8 +18,8 @@
 
 	<%
 		String ticketid = request.getParameter("ticketid");
-		String beschreibung_session = request.getParameter("beschreibung");
-		String user_session = request.getParameter("user");
+		String beschreibung = request.getParameter("beschreibung");
+		String user = request.getParameter("user");
 		String ftyp = request.getParameter("ftyp");
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb", "admin", "herbert");
@@ -29,21 +29,20 @@
 	    if (beschreibung.equals (""))
 	    { %>
 		<% out.println("Das Feld BESCHREIBUNG muss ausgefüllt werden." );%>
-		<%@     include file="/ticket.jsp"%>
+		
 		<%  }else {%>
 		<% 
 	 	if (ftyp.equals (""))
 	    { %>
 		<% out.println("Das Feld FEHLERTYP muss ausgefüllt werden." );%>
-		<%@     include file="/ticket.jsp"%>
+		
 		<%  }else {%>
 		<% 
 	 	    
 		//ResultSet rs;
 		int i = st.executeUpdate("insert into ticket(beschreibung, ftyp, user, state) values ('"
 						+ beschreibung + "','" + ftyp + "', '" + user + "', 'offen')");
-		
-		{ 		
+				
 		String result;
 					// Recipient's email ID needs to be mentioned.
 					String to = "thomas.tt929@gmail.com";
@@ -73,8 +72,8 @@
 						// Set Subject: header field
 						message.setSubject("Ticket!");
 						// Now set the actual message
-						message.setText("Es wurde ein neues Ticket erstellt von User:" + user_session + "\n"
-								+ " mit der Beschreibung:" + beschreibung_session);
+						message.setText("Es wurde ein neues Ticket erstellt von User:" + user + "\n"
+								+ " mit der Beschreibung:" + beschreibung);
 						// Send message
 						Transport.send(message);
 						result = "Ihr Ticket wurde versand!";
