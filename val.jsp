@@ -11,24 +11,30 @@
 		pst.setString(1, username);
 		pst.setString(2, password);
 		ResultSet rs = pst.executeQuery();
-
-		if (username.equals("admin")) {
-%>
-<%@     include file="/show.jsp"%>
-<%
-	} else {
-%>
-<%
-	if (rs.next()) {
-%>
-<%@     include file="/ticket.jsp"%>
-<%
-	}
-
-		}
-	} catch (Exception e) {
-		out.println("Fehler. Datenbankanbindung fehlerhaft!!");
-	}
+		
+		if (username.equals (""))
+        { %> 
+     	 <%@     include file="/login.jsp"%>
+     	 <%  }else {%>  
+     	 <% 
+               
+        if (username.equals("admin"))
+        { %> 
+     	 <%@     include file="/show.jsp"%>
+     	 <%  }else {%>  
+     	 <% 
+        if(rs.next())
+       { %>
+        <%@     include file="/ticket.jsp" %>
+       <%  }else {%>
+       <%@     include file="/login.jsp"%>
+       <% 
+       } 
+     }
+       }}
+  catch(Exception e){       
+     out.println("Fehler. Datenbankanbindung fehlerhaft!!");       
+  }      
 %>
 
 
