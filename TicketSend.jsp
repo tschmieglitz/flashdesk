@@ -1,19 +1,7 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="author"
-	content="Jerome Morin, Peter Wachsmann, Thomas schmieglitz " />
-<meta name="language" content="deutsch" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<title>Ticket versendet</title>
-</head>
-<body>
 
-	
-	<%@ page import="java.sql.*"%>
-	<%
+
+<%@ page import="java.sql.*"%>
+<%
     
     String beschreibung = request.getParameter("beschreibung_session");
     String user = request.getParameter("user_session");
@@ -25,13 +13,12 @@
  	  //ResultSet rs;
     int i = st.executeUpdate("insert into ticket(beschreibung, ftyp, user, state) values ('" + beschreibung + "','" + ftyp + "', '" + user + "', 'offen')");
     { %>
-	<%@     include file="/SendEmail.jsp"%>
-	<%  
+<%@     include file="/SendEmail.jsp"%>
+<%  
  	 }
  	%>
-	 	
-</body>
-</html>
+
+
 
 
 

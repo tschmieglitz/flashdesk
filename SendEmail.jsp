@@ -1,6 +1,6 @@
 <%@ page import="java.io.*,java.util.*,javax.mail.*"%>
 <%@ page import="javax.mail.internet.*,javax.activation.*"%>
-<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+<%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <%@ page import="java.sql.*"%>
 <%
  		String user_email = request.getParameter("user_session"); 
@@ -19,7 +19,7 @@
 
            String result;
            // Recipient's email ID needs to be mentioned.
-           String to = "thomas.tt929@gmail.com";
+           String to = "peterwachsmann@web.de";
 
            // Sender's email ID needs to be mentioned
            String from = "thomas@schmieglitz.de";
@@ -56,18 +56,18 @@
               result = "Error: unable to send message....";
            }
         %>
-        <html>
-        <head>
-        <title>Sie werden informiert!</title>
-        </head>
-        <body>
-        <center>
-        <h1>Ihr Ticket wurde versand!</h1>
-        </center>
-        <p align="center">
-        <% 
+<html>
+<head>
+<title>Sie werden informiert!</title>
+</head>
+<body>
+	<center>
+		<h1>Ihr Ticket wurde versand!</h1>
+	</center>
+	<p align="center">
+		<% 
            out.println("Result: " + result + "\n");
         %>
-        </p>
-        </body>
-        </html>
+	</p>
+</body>
+</html>
