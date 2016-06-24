@@ -19,7 +19,7 @@
 
            String result;
            // Recipient's email ID needs to be mentioned.
-           String to = "peterwachsmann@web.de";
+           String to = "thomas.tt929@gmail.com";
 
            // Sender's email ID needs to be mentioned
            String from = "thomas@schmieglitz.de";
