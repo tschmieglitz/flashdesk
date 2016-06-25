@@ -27,7 +27,7 @@
        { %>
         <%@     include file="/ticket.jsp" %>
        <%  }else {%>
-       <%@     include file="/login.jsp"%>
+       <%@     include file="/login_error.jsp"%>
        <% 
        } 
      }
