@@ -78,8 +78,6 @@
 				<div class="container">
 					<div class="row">
 
-
-
 						<form>
 							<!-- xs vorher 8, md 10 -->
 							<div class="col-xs-12 col-md-12">
@@ -101,9 +99,9 @@
 						</form>
 
 					</div>
-					<divclass"col-xs-2col-md-2"> <!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
+					<div class="col-xs-2col-md-2"> <!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
 					<button type="submit" class="btn">Absenden</button>
-					<button type="reset" class="btn">Eingaben löschen</button>
+					<button type="reset" class="btn">Löschen</button>
 					<button type="reset" class="btn"
 						onClick="javascript:history.go(-1)">Zurück</button>
 			
@@ -119,6 +117,7 @@
 									<td style="width: 100px"><li class="ticket">Status</li></td>
 								</tr>
 							</table>
+							
 							<%
 								while (rss.next()) {
 							%>

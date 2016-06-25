@@ -78,13 +78,13 @@
 
 	<form method="post" action="show_erledigt.jsp">
 		<div class="col-xs-2 col-md-2">
-			<button type="submit" class="btn" style="margin-left: 30px;">erledigt</button>
+			<button type="submit" class="btn" style="margin-left: 30px;">Erledigt</button>
 		</div>
 	</form>
 
 	<form method="post" action="show.jsp">
 		<div class="col-xs-2 col-md-2">
-			<button type="submit" class="btn" style="margin-left: 30px;">alle</button>
+			<button type="submit" class="btn" style="margin-left: 30px;">Alle</button>
 		</div>
 	</form>
 
