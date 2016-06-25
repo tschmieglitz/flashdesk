@@ -59,7 +59,7 @@
 				</div>
 				<div>
 					<!-- Sprachänderung und Button verkleinern - JM -->
-					<button type="submit" class="btn">Aanmelden</button>
+					<button type="submit" class="btn">Anmelden</button>
 					<button type="reset" class="btn">Löschen</button>
 					<button type="reset" class="btn"
 						onClick="javascript:history.go(-1)">Zurück</button>
