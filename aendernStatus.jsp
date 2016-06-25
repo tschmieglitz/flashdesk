@@ -1,4 +1,16 @@
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author"
+	content="Jerome Morin, Peter Wachsmann, Thomas schmieglitz " />
+<meta name="language" content="deutsch" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<meta http-equiv="refresh" content="5; URL=http://ts79.ddns.net:7070/show.jsp">
+<title>Status</title>
+</head>
+<body>
 
 <%@ page import="java.sql.*"%>
 <%
@@ -11,3 +23,5 @@
 		
 	%>
 
+</body>
+</html>

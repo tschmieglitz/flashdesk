@@ -37,10 +37,10 @@
 			ResultSet rss = st.executeQuery(query);
 		%>
 		<div class="col-xs-12 col-md-12">
-			<div>
+			<div >
 				<ul class="commentsTicket" id="commentsTicket">
 					<table>
-						<tr>
+						<tr >
 							<td style="width: 100px"><li class="ticket">Ticket</li></td>
 							<td style="width: 350px"><li class="ticket">Bezeichnung</li></td>
 							<td style="width: 150px"><li class="ticket">Fehlertyp</li></td>
@@ -52,8 +52,8 @@
 					%>
 
 
-					<table>
-						<tr>
+					<table >
+						<tr > 
 							<td style="width: 100px; height: 50px"><li class="ticket"><%=rss.getString(1)%></li></td>
 							<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
 							<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
@@ -66,9 +66,9 @@
 					<%
 						}
 					%>
-				</ul>
+			</ul>	
 			</div>
-		</div>
+			</div>
 	</form>
 	<div class="col-xs-2 col-md-2">
 		<!-- Sprachänderung und Button verkleinern - JM -->
@@ -78,19 +78,19 @@
 
 	<form method="post" action="show_erledigt.jsp">
 		<div class="col-xs-2 col-md-2">
-			<button type="submit" class="btn" style="margin-left: 30px;">Erledigt</button>
+			<button type="submit" class="btn" style="margin-left: 30px;">erledigt</button>
 		</div>
 	</form>
 
 	<form method="post" action="show.jsp">
 		<div class="col-xs-2 col-md-2">
-			<button type="submit" class="btn" style="margin-left: 30px;">Alle</button>
+			<button type="submit" class="btn" style="margin-left: 30px;">alle</button>
 		</div>
-	</form>
+</form>	
 
 
-	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-	<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="script.js"></script>
 
 
 </body>

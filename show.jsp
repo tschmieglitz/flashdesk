@@ -1,17 +1,4 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-		<%@page import="java.sql.*"%>
-		<%@page import="javax.sql.*"%>
-		<%@page import="java.sql.Connection"%>
-		<%
-			String usernam = request.getParameter("usernam");
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb", "admin", "herbert");
-			Statement st = con.createStatement();
-			String query = "select * from ticket";
-			//String query="select * from info where username='"+username+"'";
-			ResultSet rss = st.executeQuery(query);
-		%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,87 +24,73 @@
 				</div>
 			</div>
 		</header>
+		<%@page import="java.sql.*"%>
+		<%@page import="javax.sql.*"%>
+		<%@page import="java.sql.Connection"%>
+		<%
+			String usernam = request.getParameter("usernam");
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb", "admin", "herbert");
+			Statement st = con.createStatement();
+			String query = "select * from ticket";
+			//String query="select * from info where username='"+username+"'";
+			ResultSet rss = st.executeQuery(query);
+		%>
+		<div class="col-xs-12 col-md-12">
+			<div >
+				<ul class="commentsTicket" id="commentsTicket">
+					<table>
+						<tr >
+							<td style="width: 100px"><li class="ticket">Ticket</li></td>
+							<td style="width: 350px"><li class="ticket">Bezeichnung</li></td>
+							<td style="width: 150px"><li class="ticket">Fehlertyp</li></td>
+							<td style="width: 100px"><li class="ticket">Status</li></td>
+						</tr>
+					</table>
+					<%
+						while (rss.next()) {
+					%>
 
-			<div class="main">
-				<div class="container">
-					<div class="row">
 
-						<form>
-							<!-- xs vorher 8, md 10 -->
-							<div class="col-xs-12 col-md-12">
-								<!-- Beschreibung wird um die ID zur Identifikation für die JavaScript Funktion, sowie um den Wert der Cols zur Berechnung
-							innerhalb der Funktion erweitert -JM 30.05.2016- -->
-
-								<input type="hidden" name="user_session" id="comment"
-									type="text" value="<%=session.getAttribute("theName")%>">
-								<input id="comment" type="text" name="beschreibung_session"
-									placeholder="Beschreibung"> <input id="comment"
-									type="text" name="ftyp" placeholder="Fehlertyp" list="Fehler">
-								<datalist id="Fehler" class="datalist">
-									<option>Software</option>
-									<option>Hardware</option>
-									<option>Peripherie</option>
-								</datalist>
-							</div>
-						</form>
-</div>
-
-					
-
-				
+					<table >
+						<tr > 
+							<td style="width: 100px; height: 50px"><li class="ticket"><%=rss.getString(1)%></li></td>
+							<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
+							<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
+							<td style="width: 150px"><li class="ticket"><%=rss.getString(6)%></li></td>
+							<td valign="middle" align="center"><divclass"col-xs-4col-md-2">
+								<button type="submit" class="btnTicket" name="ticketid"
+									value="<%=rss.getString(1)%>">erledigt</button></td>
+						</tr>
+					</table>
+					<%
+						}
+					%>
+			</ul>	
+			</div>
+			</div>
+	</form>
 	<div class="col-xs-2 col-md-2">
 		<!-- Sprachänderung und Button verkleinern - JM -->
 		<button type="reset" class="btn" onClick="javascript:history.go(-2)"
-			>Zurück</button>
+			style="margin-left: 30px;">Zurück</button>
 	</div>
+
 	<form method="post" action="show_erledigt.jsp">
 		<div class="col-xs-2 col-md-2">
-			<button type="submit" class="btn" >Erledigt</button>
+			<button type="submit" class="btn" style="margin-left: 30px;">erledigt</button>
 		</div>
 	</form>
 
 	<form method="post" action="show_offen.jsp">
 		<div class="col-xs-2 col-md-2">
-			<button type="submit" class="btn" >Offen</button>
+			<button type="submit" class="btn" style="margin-left: 30px;">offene</button>
 		</div>
-	</form>
-	
-</div>
-					</div>
-				<br> <br> <br>
-				<div class="col-xs-12 col-md-12">
-					<div>
-						<ul class="commentsTicket" id="commentsTicket">
-							<table>
-								<tr>
-									<td style="width: 100px"><li class="ticket">Ticket</li></td>
-									<td style="width: 350px"><li class="ticket">Bezeichnung</li></td>
-									<td style="width: 150px"><li class="ticket">Fehlertyp</li></td>
-									<td style="width: 100px"><li class="ticket">Status</li></td>
-								</tr>
-							</table>
-							
-							<%
-								while (rss.next()) {
-							%>
+</form>	
 
 
-							<table>
-								<tr>
-									<td style="width: 100px; height: 50px"><li class="ticket"><%=rss.getString(1)%></li></td>
-									<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
-									<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
-									<td style="width: 150px"><li class="ticket"><%=rss.getString(6)%></li></td>
-									<td valign="middle" align="center"><div class="col-xs-4col-md-2">
-								</tr>
-							</table>
-							<%
-								}
-							%>
-						</form>	
-			
-	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-	<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="script.js"></script>
 
 
 </body>
