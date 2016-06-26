@@ -37,6 +37,10 @@
 			ResultSet rss = st.executeQuery(query);
 		%>
 		
+		<div class="main">
+				<div class="container">
+					<div class="row">
+		
 	<div class="col-xs-2 col-md-2">
 		<!-- Sprachänderung und Button verkleinern - JM -->
 		<button type="reset" class="btn" onClick="javascript:history.go(-2)"
@@ -58,6 +62,7 @@
 		<form method="post" action="aendernStatus_erledigt.jsp">
 		<div class="col-xs-12 col-md-12">
 			<div >
+			<br/>
 				<ul class="commentsTicket" id="commentsTicket">
 					<table>
 						<tr >
@@ -80,7 +85,7 @@
 							<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
 							<td valign="middle" align="center"><div class="col-xs-4col-md-2">
 								<button type="submit" class="btnTicket" name="ticketid"
-									value="<%=rss.getString(1)%>">erledigt</button></td>
+									value="<%=rss.getString(1)%>">erledigt</button></div></td>
 						</tr>
 					</table>
 					<%
@@ -91,7 +96,9 @@
 			</div>
 	
 		</form>
-	
+		</div>
+			</div>
+	</div>
 
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 		<script src="script.js"></script>
