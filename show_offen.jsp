@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-	<form method="post" action="aendernStatus.jsp">
+	
 		<header class="header">
 			<div class="container">
 				<div class="row">
@@ -36,6 +36,26 @@
 			//String query="select * from info where username='"+username+"'";
 			ResultSet rss = st.executeQuery(query);
 		%>
+		
+	<div class="col-xs-2 col-md-2">
+		<!-- Sprachänderung und Button verkleinern - JM -->
+		<button type="reset" class="btn" onClick="javascript:history.go(-2)"
+			style="margin-left: 30px;">Zurück</button>
+	</div>
+
+	<form method="post" action="show_erledigt.jsp">
+		<div class="col-xs-2 col-md-2">
+			<button type="submit" class="btn" style="margin-left: 30px;">erledigt</button>
+		</div>
+	</form>
+
+	<form method="post" action="show.jsp">
+		<div class="col-xs-2 col-md-2">
+			<button type="submit" class="btn" style="margin-left: 30px;">alle</button>
+		</div>
+</form>
+	
+		<form method="post" action="aendernStatus_erledigt.jsp">
 		<div class="col-xs-12 col-md-12">
 			<div >
 				<ul class="commentsTicket" id="commentsTicket">
@@ -58,7 +78,7 @@
 							<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
 							<td style="width: 150px"><li class="ticket"><%=rss.getString(4)%></li></td>
 							<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
-							<td valign="middle" align="center"><divclass"col-xs-4col-md-2">
+							<td valign="middle" align="center"><div class="col-xs-4col-md-2">
 								<button type="submit" class="btnTicket" name="ticketid"
 									value="<%=rss.getString(1)%>">erledigt</button></td>
 						</tr>
@@ -69,25 +89,9 @@
 			</ul>	
 			</div>
 			</div>
-	</form>
-	<div class="col-xs-2 col-md-2">
-		<!-- Sprachänderung und Button verkleinern - JM -->
-		<button type="reset" class="btn" onClick="javascript:history.go(-2)"
-			style="margin-left: 30px;">Zurück</button>
-	</div>
-
-	<form method="post" action="show_erledigt.jsp">
-		<div class="col-xs-2 col-md-2">
-			<button type="submit" class="btn" style="margin-left: 30px;">erledigt</button>
-		</div>
-	</form>
-
-	<form method="post" action="show.jsp">
-		<div class="col-xs-2 col-md-2">
-			<button type="submit" class="btn" style="margin-left: 30px;">alle</button>
-		</div>
-</form>	
-
+	
+		</form>
+	
 
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 		<script src="script.js"></script>
