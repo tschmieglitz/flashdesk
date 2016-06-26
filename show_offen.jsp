@@ -56,8 +56,8 @@
 						<tr > 
 							<td style="width: 100px; height: 50px"><li class="ticket"><%=rss.getString(1)%></li></td>
 							<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
+							<td style="width: 150px"><li class="ticket"><%=rss.getString(4)%></li></td>
 							<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
-							<td style="width: 150px"><li class="ticket"><%=rss.getString(6)%></li></td>
 							<td valign="middle" align="center"><divclass"col-xs-4col-md-2">
 								<button type="submit" class="btnTicket" name="ticketid"
 									value="<%=rss.getString(1)%>">erledigt</button></td>
