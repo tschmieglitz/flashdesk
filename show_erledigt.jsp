@@ -40,21 +40,26 @@
 		<div class="container">
 			<div class="row">
 
-				<div class="col-xs-2 col-md-2">
-					<!-- Sprachänderung und Button verkleinern - JM -->
-					<button type="reset" class="btn"
-						onClick="javascript:history.go(-2)" style="margin-left: 30px;">Zurück</button>
-				</div>
-				<form method="post" action="show_offen.jsp">
-					<div class="col-xs-2 col-md-2">
-						<button type="submit" class="btn" style="margin-left: 30px;">offen</button>
-					</div>
-				</form>
-				<form method="post" action="show.jsp">
-					<div class="col-xs-2 col-md-2">
-						<button type="submit" class="btn" style="margin-left: 30px;">alle</button>
-					</div>
-				</form>
+				<table>
+					<tr>
+						<td><form method="post" action="login.jsp">
+								<div class="col-xs-2 col-md-2">
+									<button type="submit" class="btn" style="margin-left: 30px;">Anmeldung</button>
+								</div>
+							</form></td>
+						<td><form method="post" action="show_offen.jsp">
+								<div class="col-xs-2 col-md-2">
+									<button type="submit" class="btn" style="margin-left: 30px;">offen</button>
+								</div>
+							</form></td>
+						<td><form method="post" action="show.jsp">
+								<div class="col-xs-2 col-md-2">
+									<button type="submit" class="btn" style="margin-left: 30px;">alle</button>
+								</div>
+							</form></td>
+
+					</tr>
+				</table>
 
 				<form method="post" action="aendernStatus_offen.jsp">
 					<div class="col-xs-12 col-md-12">
@@ -80,9 +85,11 @@
 										<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
 										<td style="width: 150px"><li class="ticket"><%=rss.getString(4)%></li></td>
 										<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
-										<td valign="middle" align="center"><div class="col-xs-4col-md-2">
+										<td valign="middle" align="center"><div
+												class="col-xs-4col-md-2">
 												<button type="submit" class="btnTicket" name="ticketid"
-													value="<%=rss.getString(1)%>">offen</button> </div></td>
+													value="<%=rss.getString(1)%>">offen</button>
+											</div></td>
 									</tr>
 								</table>
 								<%
