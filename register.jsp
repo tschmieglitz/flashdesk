@@ -74,7 +74,7 @@
 					</form>
 				</div>
 				<!-- Sprachänderung und Button verkleinern - JM -->
-				<div class "col-xs-2col-md-2">
+				<div class = "col-xs-2col-md-2">
 					<button type="submit" class="btn">Absenden</button>
 					<button type="reset" class="btn">Löschen</button>
 					<button type="reset" class="btn"

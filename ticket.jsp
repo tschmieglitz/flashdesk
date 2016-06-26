@@ -129,18 +129,18 @@
 									<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
 									<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
 									<td style="width: 150px"><li class="ticket"><%=rss.getString(6)%></li></td>
-									<td valign="middle" align="center"><divclass"col-xs-4col-md-2">
+									<td valign="middle" align="center"><div class="col-xs-4col-md-2">
 								</tr>
 							</table>
 							<%
 								}
 							%>
-						
+						</ul>
 					</div>
-					</ul>
+					
 				</div>
 			</div>
-
+</div>
 			</div>
 			<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 			<script src="script.js"></script>
