@@ -9,6 +9,7 @@
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
         Connection conn = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb","admin","herbert");    
         PreparedStatement pst = conn.prepareStatement("Select user,pass from user where user=? and pass=?");
+        String query_email = "select mail from user where ='user_mail'";
         pst.setString(1, user_email);
         pst.setString(2, password);
         ResultSet rs = pst.executeQuery(); 
@@ -47,7 +48,7 @@
               // Set Subject: header field
               message.setSubject("Ticket!");
               // Now set the actual message
-              message.setText("Es wurde ein neues Ticket erstellt von User:" + user_email +"."+ "\n"+"folgender Fehler wurde gemeldet:" + beschreibung_email );
+              message.setText("Es wurde ein neues Ticket erstellt von User:" + user_email +"."+ "\n"+"folgender Fehler wurde gemeldet:" + beschreibung_email);
               // Send message
               Transport.send(message);
               result = "Ihr Ticket wurde versand!" +"von "+ user_email ;
