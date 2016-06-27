@@ -45,17 +45,17 @@
 					<tr>
 						<td><form method="post" action="login.jsp">
 								<div class="col-xs-2 col-md-2">
-									<button type="submit" class="btn" style="margin-left: 30px;">Anmeldung</button>
+									<button type="submit" class="btn">Anmeldung</button>
 								</div>
 							</form></td>
 						<td><form method="post" action="show_erledigt.jsp">
 								<div class="col-xs-2 col-md-2">
-									<button type="submit" class="btn" style="margin-left: 30px;">erledigt</button>
+									<button type="submit" class="btn">erledigt</button>
 								</div>
 							</form></td>
 						<td><form method="post" action="show_offen.jsp">
 								<div class="col-xs-2 col-md-2">
-									<button type="submit" class="btn" style="margin-left: 30px;">offene</button>
+									<button type="submit" class="btn" >offen</button>
 								</div>
 
 							</form></td>
@@ -69,7 +69,7 @@
 						<div>
 							<br />
 							<ul class="commentsTicket" id="commentsTicket">
-								<table>
+								<table style="margin-left: -60px">
 									<tr>
 										<td style="width: 100px"><li class="ticket">Ticket</li></td>
 										<td style="width: 350px"><li class="ticket">Bezeichnung</li></td>
@@ -82,7 +82,7 @@
 								%>
 
 
-								<table>
+								<table style="margin-left: -60px">
 									<tr>
 										<td style="width: 100px; height: 50px"><li class="ticket"><%=rss.getString(1)%></li></td>
 										<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>

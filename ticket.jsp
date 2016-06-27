@@ -109,7 +109,7 @@
 				<div class="col-xs-12 col-md-12">
 					<div>
 						<ul class="commentsTicket" id="commentsTicket">
-							<table>
+							<table style="margin-left: -70px">
 								<tr>
 									<td style="width: 100px"><li class="ticket">Ticket</li></td>
 									<td style="width: 350px"><li class="ticket">Bezeichnung</li></td>
@@ -123,7 +123,7 @@
 							%>
 
 
-							<table>
+							<table style="margin-left: -70px">
 								<tr>
 									<td style="width: 100px; height: 50px"><li class="ticket"><%=rss.getString(1)%></li></td>
 									<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
