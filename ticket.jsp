@@ -99,48 +99,51 @@
 						</form>
 
 					</div>
-					<div class="col-xs-2col-md-2"> <!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
-					<button type="submit" class="btn">Absenden</button>
-					<button type="reset" class="btn">Löschen</button>
-					<button type="reset" class="btn"
-						onClick="javascript:history.go(-1)">Zurück</button>
-			
-				<br> <br> <br>
-				<div class="col-xs-12 col-md-12">
-					<div>
-						<ul class="commentsTicket" id="commentsTicket">
-							<table style="margin-left: -70px">
-								<tr>
-									<td style="width: 100px"><li class="ticket">Ticket</li></td>
-									<td style="width: 350px"><li class="ticket">Bezeichnung</li></td>
-									<td style="width: 150px"><li class="ticket">Fehlertyp</li></td>
-									<td style="width: 100px"><li class="ticket">Status</li></td>
-								</tr>
-							</table>
-							
-							<%
-								while (rss.next()) {
-							%>
+					<div class="col-xs-2col-md-2">
+						<!-- Änderung der Sprache der Buttons und Verkleinerung dieser - JM -->
+						<button type="submit" class="btn">Absenden</button>
+						<button type="reset" class="btn">Löschen</button>
+						<button type="reset" class="btn"
+							onClick="javascript:history.go(-1)">Zurück</button>
+
+						<br> <br> <br>
+						<div class="col-xs-12 col-md-12">
+							<div>
+								<ul class="commentsTicket" id="commentsTicket">
+									<table style="margin-left: -70px">
+										<tr>
+											<td style="width: 100px"><li class="ticket">Ticket</li></td>
+											<td style="width: 350px"><li class="ticket">Bezeichnung</li></td>
+											<td style="width: 150px"><li class="ticket">Fehlertyp</li></td>
+											<td style="width: 100px"><li class="ticket">Status</li></td>
+										</tr>
+									</table>
+
+									<%
+										while (rss.next()) {
+									%>
 
 
-							<table style="margin-left: -70px">
-								<tr>
-									<td style="width: 100px; height: 50px"><li class="ticket"><%=rss.getString(1)%></li></td>
-									<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
-									<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
-									<td style="width: 150px"><li class="ticket"><%=rss.getString(6)%></li></td>
-									<td valign="middle" align="center"><div class="col-xs-4col-md-2">
-								</tr>
-							</table>
-							<%
-								}
-							%>
-						</ul>
+									<table style="margin-left: -70px">
+										<tr>
+											<td style="width: 100px; height: 50px"><li
+												class="ticket"><%=rss.getString(1)%></li></td>
+											<td style="width: 350px"><li class="ticket"><%=rss.getString(2)%></li></td>
+											<td style="width: 150px"><li class="ticket"><%=rss.getString(5)%></li></td>
+											<td style="width: 150px"><li class="ticket"><%=rss.getString(6)%></li></td>
+											<td valign="middle" align="center"><div
+													class="col-xs-4col-md-2">
+										</tr>
+									</table>
+									<%
+										}
+									%>
+								</ul>
+							</div>
+
+						</div>
 					</div>
-					
 				</div>
-			</div>
-</div>
 			</div>
 			<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 			<script src="script.js"></script>
