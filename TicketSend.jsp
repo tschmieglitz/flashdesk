@@ -11,7 +11,7 @@
     Statement st = con.createStatement();
 
  	  //ResultSet rs;
-    int i = st.executeUpdate("insert into ticket(beschreibung, ftyp, user, state) values ('" + beschreibung + "','" + ftyp + "', '" + user + "', 'offen')");
+    int i = st.executeUpdate("insert into ticket(beschreibung, ftyp, user, state) values ('" + beschreibung + "','" + ftyp + "', '" + user + "', 'Offen')");
     { %>
 <%@     include file="/SendEmail.jsp"%>
 <%  
