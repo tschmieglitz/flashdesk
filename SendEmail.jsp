@@ -50,7 +50,7 @@
               message.setText("Es wurde ein neues Ticket erstellt von User:" + user_email +"."+ "\n"+"folgender Fehler wurde gemeldet:" + beschreibung_email );
               // Send message
               Transport.send(message);
-              result = "Ihr Ticket wurde versand!" +"von"+ user_email ;
+              result = "Ihr Ticket wurde versand!" +"von "+ user_email ;
            }catch (MessagingException mex) {
               mex.printStackTrace();
               result = "Error: unable to send message....";
