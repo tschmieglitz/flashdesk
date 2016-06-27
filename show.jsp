@@ -91,7 +91,7 @@
 										<td valign="middle" align="center"><div
 												class="col-xs-4col-md-2">
 												<button type="submit" class="btnTicket" name="ticketid"
-													value="<%=rss.getString(1)%>">erledigt</button>
+													value="<%=rss.getString(1)%>">Erledigt</button>
 											</div></td>
 									</tr>
 								</table>

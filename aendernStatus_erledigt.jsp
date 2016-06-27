@@ -19,7 +19,7 @@
 		Connection con = DriverManager.getConnection("jdbc:mysql://ts79.ddns.net:3306/flashdb", "admin", "herbert");
 		Statement st = con.createStatement();
 		//ResultSet rs;
-		int i = st.executeUpdate("update ticket set state ='erledigt'where TicketID='" + ticketid + "'");
+		int i = st.executeUpdate("update ticket set state ='Erledigt'where TicketID='" + ticketid + "'");
 		// state = offen Ticket wurde aufgeben
 		// state = geschlossen Ticket wurde abgearbeitet
 	%>
