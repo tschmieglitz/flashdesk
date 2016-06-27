@@ -44,17 +44,17 @@
 					<tr>
 						<td><form method="post" action="login.jsp">
 								<div class="col-xs-2 col-md-2">
-									<button type="submit" class="btn" >Anmeldung</button>
+									<button type="submit" class="btn" >Zurück</button>
 								</div>
 							</form></td>
 						<td><form method="post" action="show_offen.jsp">
 								<div class="col-xs-2 col-md-2">
-									<button type="submit" class="btn" >offen</button>
+									<button type="submit" class="btn" >Offen</button>
 								</div>
 							</form></td>
 						<td><form method="post" action="show.jsp">
 								<div class="col-xs-2 col-md-2">
-									<button type="submit" class="btn" >alle</button>
+									<button type="submit" class="btn" >Alle</button>
 								</div>
 							</form></td>
 
